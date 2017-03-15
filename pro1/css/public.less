@@ -1,0 +1,104 @@
+@wrap:1170px;
+@nav-color:#FF5864;
+
+
+*,ul,li,ol,dl,p{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body{
+  min-width: @wrap;
+  font-family:"微软雅黑","新宋体";
+  color:#333;
+  font-size: 16px;
+}
+.left{
+  float: left;
+}
+.right{
+  float: right;
+}
+:after{
+  display: block;
+  content: '';
+  clear: both;
+}
+a{
+  color:#FFF;
+  &:hover{
+    text-decoration: none;
+    color:#FFF;
+  }
+}
+
+header{
+  padding:.5rem 0 .5rem 5%;
+  background-color: #fff;
+}
+nav{
+  background-color: @nav-color;
+}
+.wrap{
+  max-width: @wrap;
+  margin:0 auto;
+}
+nav{
+  color:#FFF;
+}
+nav li{
+  cursor: pointer;
+  dl dd{
+    color:#FFF;
+  }
+  img{
+    width: 20%;
+  }
+}
+.nav-active{
+  background-color: #fff;
+  dl dd{
+    color:#333;
+  }
+}
+nav li:hover{
+  background-color: #fff;
+  dl dd{
+    color:#333;
+  }
+}
+.nav-tabs.nav-justified>li>a{
+  border:none;
+  display: block !important;
+  &:hover{
+    background-color: #ffffff;
+  }
+  &:focus{
+    background-color: #ffffff;
+  }
+}
+//footer
+footer{
+  border-top:1px solid @nav-color;
+  margin-top: 150px;
+  .association{
+    width:60%;
+    color:#999;
+    margin:1rem auto;
+    li{
+      margin-left: 2rem;
+      a{
+        color:#999;
+        &:hover{
+            color:@nav-color;
+        }
+      }
+    }
+  }
+  &:after{
+    display: block;
+    height: 10rem;
+    width: 100%;
+    background: #FFF url(../images/footer.png);
+  }
+}
