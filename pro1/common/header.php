@@ -23,41 +23,53 @@
     <nav>
         <div class="wrap">
             <ul class="nav nav-tabs nav-justified text-center">
-                <li class="nav-active">
-                    <dl>
-                        <dt><img src="images/nav1-active.png" alt=""></dt>
-                        <dd>首页</dd>
-                    </dl>
+                <li>
+                    <a href="index.php?page=0">
+                        <dl>
+                            <dt><img src="images/nav1.png" alt=""></dt>
+                            <dd>首页</dd>
+                        </dl>
+                    </a>
                 </li>
                 <li>
-                    <dl>
-                        <dt><img src="images/nav2.png" alt=""></dt>
-                        <dd>协会简介</dd>
-                    </dl>
+                    <a href="association.php?page=1">
+                        <dl>
+                            <dt><img src="images/nav2.png" alt=""></dt>
+                            <dd>协会简介</dd>
+                        </dl>
+                    </a>
                 </li>
                 <li>
-                    <dl>
-                        <dt><img src="images/nav3.png" alt=""></dt>
-                        <dd>画家简介</dd>
-                    </dl>
+                    <a href="painter.php?page=2">
+                        <dl>
+                            <dt><img src="images/nav3.png" alt=""></dt>
+                            <dd>画家简介</dd>
+                        </dl>
+                    </a>
                 </li>
                 <li>
-                    <dl>
-                        <dt><img src="images/nav4.png" alt=""></dt>
-                        <dd>协会活动</dd>
-                    </dl>
+                    <a href="activity.php?page=3">
+                        <dl>
+                            <dt><img src="images/nav4.png" alt=""></dt>
+                            <dd>协会活动</dd>
+                        </dl>
+                    </a>
                 </li>
                 <li>
-                    <dl>
-                        <dt><img src="images/nav5.png" alt=""></dt>
-                        <dd>个人中心</dd>
-                    </dl>
+                    <a href="personal.php?page=4">
+                        <dl>
+                            <dt><img src="images/nav5.png" alt=""></dt>
+                            <dd>个人中心</dd>
+                        </dl>
+                    </a>
                 </li>
                 <li>
-                    <dl>
-                        <dt><img src="images/nav6.png" alt=""></dt>
-                        <dd>MFPA商城</dd>
-                    </dl>
+                    <a href="index.php?page=0">
+                        <dl>
+                            <dt><img src="images/nav6.png" alt=""></dt>
+                            <dd>MFPA商城</dd>
+                        </dl>
+                    </a>
                 </li>
             </ul>
         </div>

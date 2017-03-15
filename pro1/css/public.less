@@ -7,6 +7,11 @@
   padding: 0;
   list-style: none;
 }
+body{
+  min-width: @wrap;
+  font-family:"微软雅黑","新宋体";
+  color:#333;
+}
 .left{
   float: left;
 }
@@ -28,6 +33,7 @@ a{
 
 header{
   padding:.5rem 0 .5rem 5%;
+  background-color: #fff;
 }
 nav{
   background-color: @nav-color;
@@ -40,19 +46,35 @@ nav{
   color:#FFF;
 }
 nav li{
-  padding:.5rem 0;
   cursor: pointer;
+  dl dd{
+    color:#FFF;
+  }
   img{
     width: 20%;
   }
 }
 .nav-active{
   background-color: #fff;
-  color:#000;
+  dl dd{
+    color:#333;
+  }
 }
 nav li:hover{
   background-color: #fff;
-  color:#000;
+  dl dd{
+    color:#333;
+  }
+}
+.nav-tabs.nav-justified>li>a{
+  border:none;
+  display: block !important;
+  &:hover{
+    background-color: #ffffff;
+  }
+  &:focus{
+    background-color: #ffffff;
+  }
 }
 //footer
 footer{
@@ -76,6 +98,6 @@ footer{
     display: block;
     height: 10rem;
     width: 100%;
-    background: @nav-color url(../images/footer.png);
+    background: #FFF url(../images/footer.png);
   }
 }

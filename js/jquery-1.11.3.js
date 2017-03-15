@@ -8117,7 +8117,7 @@ if ( !getSetAttribute ) {
 
 			ret.value = value += "";
 
-			// Break association with cloned elements by also using setAttribute (#9646)
+			// Break association.less with cloned elements by also using setAttribute (#9646)
 			if ( name === "value" || value === elem.getAttribute( name ) ) {
 				return value;
 			}
