@@ -19,10 +19,15 @@ body{
   background-size:100%;
   background-attachment:fixed;
 }
+section .wrap h3{
+  margin-top: 36px;
+  margin-bottom: 36px;
+}
 .section-header{
   .h3{
-    padding:5px 4rem 5px 7rem;
+    padding:7px 2rem 7px 5rem;
     color:#FFF;
+    font-size: 20px;
     -webkit-border-radius:.5rem;
     -moz-border-radius:.5rem;
     border-radius:.5rem;
@@ -39,7 +44,7 @@ body{
 .news{
     .section-header{
       .h3{
-        background: @nav-color url(../images/news.png) 4rem center no-repeat;
+        background: @nav-color url(../images/news.png) 2rem center no-repeat;
         -webkit-background-size:2rem;
         background-size:2rem;
       }
@@ -47,13 +52,13 @@ body{
   .news-a {
     display: block;
     color: #000;
-    line-height:3rem;
+    line-height:4rem;
     border-bottom: 3px dotted #FFC0C5;
     i {
       display: inline-block;
       width: 8px;
       height: 8px;
-      margin-top: 1.2rem;
+      margin-top: 1.6rem;
       margin-right: 1rem;
       -webkit-border-radius: 50%;
       -moz-border-radius: 50%;
@@ -62,16 +67,22 @@ body{
     }
     &:hover {
       color:@nav-color;
+      span:last-child{
+        color:@nav-color;
+      }
       i {
         background-color: @nav-color;
       }
+    }
+    span:last-child{
+      color:#999;
     }
   }
 }
 .art{
   .section-header{
     .h3{
-      background: #FBC434 url(../images/yishu.png) 4rem center no-repeat;
+      background: #FBC434 url(../images/yishu.png) 2rem center no-repeat;
       -webkit-background-size:2rem;
       background-size:2rem;
     }
@@ -79,20 +90,41 @@ body{
       color:#FBC434;
     }
   }
+  dd{
+    width: 55%;
+    margin: 20px auto 50px;
+    h4{
+      font-weight:bold;
+    }
+  }
 }
 .hot{
    .section-header{
      .h3{
-       background: #22ABA4 url(../images/hot.png) 4rem center no-repeat;
+       background: #22ABA4 url(../images/hot.png) 2rem center no-repeat;
        -webkit-background-size:2rem;
        background-size:2rem;
      }
-     h3 a{
-       color:#22ABA4;
+     h3{
+       margin-top: 0;
+           a{
+               color:#22ABA4;
+           }
      }
    }
+  dd{
+    h3{
+      font-size:20px;
+      font-weight:bold;
+    }
+    p{
+      text-indent: 36px;
+      font-size:18px;
+      line-height: 30px;
+    }
+  }
  }
-.art dl,.hot dl{
+.art dl{
   cursor: pointer;
   dt{
     overflow: hidden;
@@ -120,6 +152,7 @@ body{
     }
   }
 }
+
 //艺术画廊
 .flex{
   display: -webkit-flex;
@@ -127,7 +160,7 @@ body{
   flex-flow:row wrap;
   justify-content:space-between;
   dl{
-    flex-grow:1;
+    flex-grow:0;
   }
 }
 

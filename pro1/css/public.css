@@ -12,6 +12,7 @@ body {
   min-width: 1170px;
   font-family: "微软雅黑", "新宋体";
   color: #333;
+  font-size: 16px;
 }
 .left {
   float: left;
@@ -78,7 +79,7 @@ nav li:hover dl dd {
 }
 footer {
   border-top: 1px solid #ff5864;
-  margin-top: 2rem;
+  margin-top: 150px;
 }
 footer .association {
   width: 60%;
