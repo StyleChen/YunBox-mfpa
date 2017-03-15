@@ -5,16 +5,15 @@
     <meta name="keywords" content="口足，绘画，艺术，协会"><!--定义页面关键词-->
     <meta name="description" content="口足绘画艺术家协会"><!--对页面的描述-->
     <title>口足绘画艺术家协会</title>
-    <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/public.min.css">
-    <script src="../js/jquery-1.11.3.min.js"></script>
-    <script src="../bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/public.min.css">
+    <script src="./assets/js/jquery-1.11.3.min.js"></script>
+    <script src="./assets/bootstrap/js/bootstrap.min.js"></script>
     <!--[if lt IE 8]>
-    <script src="../bootstrap/js/html5shiv.min.js"></script>
-    <script src="../bootstrap/js/respond.min.js"></script>
+    <script src="../assets/bootstrap/js/html5shiv.min.js"></script>
+    <script src="../assets/bootstrap/js/respond.min.js"></script>
     <![endif]-->
-    <script src="js/one.min.js"></script>
-
+    <script src="./js/one.min.js"></script>
 </head>
 <body>
 <header>
