@@ -41,10 +41,7 @@
 		return 'xx';
 	}
 	function kadima_default_settings() {
-	    $count12 = array('One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'TEN', 'ELEVEN', 'TWELVE');
-    	$Image_silde =  esc_url(get_template_directory_uri() .'/images/placeholder.jpg');
-    	$Image_portfolio = esc_url(get_template_directory_uri() .'/images/placeholder.jpg');
-        $wl_theme_options = array(
+        $theme_options = array(
 			'upload_image_logo'=>'',
 			'height'=>'55',
 			'width'=>'55',
@@ -77,12 +74,45 @@
 			'home_service_heading' => __('', 'kadima' ),
 			'portfolio_home'=>'0',
 			'port_heading' => __('', 'kadima' ),
+			'port_description' => __('', 'kadima' ),
 			'show_blog' => '0',
 			'show_about' => '0',
 			'about_title' => __('', 'kadima' ),
-			'blog_title' => __('', 'kadima' ),
+			'about_description' => __('', 'kadima' ),
+			'blog_title' => __('', 'kadima' ),			
+			'service_heading' => __('', 'kadima' ),
 		);
-		return apply_filters( 'kadima_options', $wl_theme_options );
+		for($i=1; $i<=12; $i++){
+			$theme_options['slide_image_'.$i] = __('', 'kadima' );
+			$theme_options['slide_title_'.$i] = __('', 'kadima' );
+			$theme_options['slide_desc_'.$i] = __('', 'kadima' );
+			$theme_options['slide_btn_text_'.$i] = __('', 'kadima' );
+			$theme_options['slide_btn_link_'.$i] = __('', 'kadima' );
+			$theme_options['service_icons_'.$i] = __('', 'kadima' );
+			$theme_options['service_img_'.$i] = __('', 'kadima' );
+			$theme_options['service_title_'.$i] = __('', 'kadima' );
+			$theme_options['service_text_'.$i] = __('', 'kadima' );
+			$theme_options['service_link_'.$i] = __('', 'kadima' );
+			$theme_options['custom_home_'.$i] = __('0', 'kadima' );
+			$theme_options['custom_desciption_'.$i] = __('', 'kadima' );
+			$theme_options['custom_title_'.$i] = __('', 'kadima' );
+			$theme_options['port_img_'.$i] = __('', 'kadima' );
+			$theme_options['port_title_'.$i] = __('', 'kadima' );
+			$theme_options['port_description_'.$i] = __('', 'kadima' );
+			$theme_options['port_link_'.$i] = __('', 'kadima' );
+			$theme_options['about_slide_img_'.$i] = __('', 'kadima' );
+			$theme_options['about_slide_title_'.$i] = __('', 'kadima' );
+			$theme_options['about_slide_desc_'.$i] = __('', 'kadima' );
+			$theme_options['about_slide_link_'.$i] = __('', 'kadima' );
+			for($ci=1; $ci<=5; $ci++){
+				$theme_options['custom_icons_'.$ci.'_'.$i] = __('', 'kadima' );
+				$theme_options['custom_img_'.$ci.'_'.$i] = __('', 'kadima' );
+				$theme_options['custom_title_'.$ci.'_'.$i] = __('', 'kadima' );
+				$theme_options['custom_text_'.$ci.'_'.$i] = __('', 'kadima' );
+				$theme_options['custom_link_'.$ci.'_'.$i] = __('', 'kadima' );
+			}			
+		}
+		return apply_filters( 'kadima_options', $theme_options );
     }
 	function kadima_get_options() { // Options API
         return wp_parse_args(
@@ -509,10 +539,7 @@
 		wp_enqueue_style( 'font-awesome-css', '//cdn.bootcss.com/font-awesome/4.4.0/css/font-awesome.min.css');
 		wp_enqueue_style('font-family', get_template_directory_uri() . '/css/font-family.css');
 		wp_enqueue_style( 'admin-css', get_template_directory_uri() . '/css/admin.css');
-		//wp_enqueue_script('webim', get_template_directory_uri() .'/web-im/webim.config.js', array('jquery'));
-		//wp_enqueue_script('strophe', get_template_directory_uri() .'/web-im/strophe-1.2.8.min.js', array('jquery'));
-		//wp_enqueue_script('websdk', get_template_directory_uri() .'/web-im/websdk-1.4.5.js', array('jquery'));
-		if ( $_GET['page'] == 'yc-plugin-dashboard/yc-plugin-dashboard.php') {
+		if ( isset($_GET['page']) && $_GET['page'] == 'yc-plugin-dashboard/yc-plugin-dashboard.php') {
 			wp_enqueue_style('materialize-css', '//cdn.bootcss.com/materialize/0.97.8/css/materialize.min.css');
 			wp_enqueue_style('woocommerce-dashboard',  get_template_directory_uri() . '/../../plugins/woocommerce/assets/css/dashboard.css');
 			wp_enqueue_style('animate-css', '//cdn.bootcss.com/animate.css/3.5.2/animate.min.css');
@@ -523,7 +550,7 @@
 			wp_enqueue_script('layim', '//cdn.yunclever.com/static/layui/layui.js', array('jquery2'));
 			wp_enqueue_script('onlinesupport', get_template_directory_uri() .'/js/onlinesupport.js', array('jquery2'));
 		}
-		if ( $_GET['page'] == 'yc-plugin-dashboard/yc-setting.php') {
+		if ( isset($_GET['page']) && $_GET['page'] == 'yc-plugin-dashboard/yc-setting.php') {
 			wp_enqueue_style('layui-css', '//cdn.yunclever.com/static/layui/css/layui.css');
 			wp_enqueue_script('jquery2', '//cdn.bootcss.com/jquery/2.2.4/jquery.min.js');
 	        wp_enqueue_script('layui-js', '//cdn.yunclever.com/static/layui/layui.js', array('jquery2'));
@@ -533,7 +560,6 @@
 		$plugins = array(
 			array('type' => 'function', 'name' => 'A2A_SHARE_SAVE_init', 'desc' => 'AddToAny Share Buttons'),
 			array('type' => 'class', 'name' => 'woocommerce', 'desc' => 'WooCommerce'),
-			//array('type' => 'define', 'name' => 'ALM_VERSION', 'desc' => 'Ajax Load More'),
 			array('type' => 'define', 'name' => 'WPCF7_VERSION', 'desc' => 'Contact From 7'),
 			array('type' => 'define', 'name' => 'DLM_VERSION', 'desc' => 'Download Monitor'),
 			array('type' => 'class', 'name' => 'LazyLoad_Images', 'desc' => 'Lazy Load'),
