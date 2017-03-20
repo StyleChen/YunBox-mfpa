@@ -34,8 +34,9 @@
 <div class="push-right">
 	<hr class="blog-sep header-sep">
 </div>-->
-
+</div>
 <?php //comments_template( '', true ); ?>
 <?php
 endwhile;
 endif; ?>
+

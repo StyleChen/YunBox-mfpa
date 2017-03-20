@@ -72,6 +72,7 @@
 --><?php
 /*	}
 */?>
+
 <footer>
     <div class="association">
         <span class="left">Copyright©2012.mfpa.All right reserved</span>
@@ -83,5 +84,9 @@
     </div>
 </footer>
 
+<script>
+
+
+</script>
 </body>
 </html>
