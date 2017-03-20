@@ -1,5 +1,5 @@
 
-#menu-menu-1 li:first-child dt{
+#menu-menu li:first-child dt{
     width: 32px;
     height: 32px;
     background: url(../images/nav1.png) center no-repeat;
@@ -7,7 +7,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu-1 li:nth-child(2) dt{
+#menu-menu li:nth-child(2) dt{
     width: 32px;
     height: 32px;
     background: url(../images/nav2.png) center no-repeat;
@@ -15,7 +15,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu-1 li:nth-child(3) dt{
+#menu-menu li:nth-child(3) dt{
     width: 32px;
     height: 32px;
     background: url(../images/nav3.png) center no-repeat;
@@ -23,7 +23,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu-1 li:nth-child(4) dt{
+#menu-menu li:nth-child(4) dt{
     width: 32px;
     height: 32px;
     background: url(../images/nav4.png) center no-repeat;
@@ -31,7 +31,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu-1 li:nth-child(5) dt{
+#menu-menu li:nth-child(5) dt{
     width: 32px;
     height: 32px;
     background: url(../images/nav5.png) center no-repeat;
@@ -39,7 +39,7 @@
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu-1 li:nth-child(6) dt{
+#menu-menu li:nth-child(6) dt{
     width: 32px;
     height: 32px;
     background: url(../images/nav6.png) center no-repeat;
