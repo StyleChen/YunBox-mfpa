@@ -142,7 +142,6 @@ function kadima_customizer( $wp_customize ) {
             'description'		=> '',
 			'capability'		=> 'edit_theme_options',
             'priority' 			=> 35,
-			'active_callback' 	=> 'is_front_page',
         )
     );
     for( $i=1; $i<=12; $i++ ) {
@@ -247,7 +246,6 @@ function kadima_customizer( $wp_customize ) {
 	    	'panel'				=> 'kadima_theme_option',
     		'capability'		=> 'edit_theme_options',
 	        'priority' 			=> 35,
-	    	'active_callback' 	=> 'is_front_page',
 		)
 	);
 	$wp_customize->add_setting(
@@ -400,7 +398,6 @@ function kadima_customizer( $wp_customize ) {
 				'panel'				=> 'kadima_theme_option',
 				'capability'		=> 'edit_theme_options',
 				'priority' 			=> 35,
-				'active_callback' 	=> 'is_front_page',
 			)
 		);
 		$wp_customize->add_setting(
