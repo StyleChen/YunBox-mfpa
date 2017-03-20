@@ -1,4 +1,9 @@
-
+#menu-menu li dt{
+    margin: 0 auto;
+}
+.navbar-container{
+    background-color: ##ff5864;
+}
 #menu-menu li:first-child dt{
     width: 32px;
     height: 32px;
