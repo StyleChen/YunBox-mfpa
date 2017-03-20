@@ -49,11 +49,12 @@ get_header();
 
 
     <script>
-        jQuery.ready(function ($) {
+        jQuery(document).ready(function ($) {
             $('.aside-ul li').click(function () {
                 $(this).parent().children('li').removeClass('aside-active');
                 $(this).addClass('aside-active');
             });
+            $('.aside-ul li.active').addClass('aside-active');
         })
     </script>
 
