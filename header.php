@@ -44,7 +44,7 @@
 <body <?php body_class(); ?>>
 <div>
 	<!-- Header Section -->
-	<header class="" >
+	<header class="container" >
 		<div class="" >
 			<!-- Logo & Contact Info -->
 			<div class="row ">
