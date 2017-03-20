@@ -106,7 +106,7 @@
 					<?php
                     wp_nav_menu( array(
                             'theme_location' => 'primary',
-                            'menu_class' => 'nav nav-tabs nav-justified text-center',
+                            'menu_class' => 'nav nav-tabs nav-justified text-center',  
                             'walker' => new kadima_nav_walker(),
                         )
                     );

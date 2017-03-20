@@ -24,11 +24,11 @@ get_header();
             </ul>-->
             <h3 class="text-center">商品推荐</h3>
             <dl class="text-center">
-                <dt><img src="../../wp-content/themes/YunBox-core-master/images/old1.jpg" alt=""></dt>
+                <dt><img src="../../wp-content/themes/kadima/images/old1.jpg" alt=""></dt>
                 <dd><p>￥500</p><p>国画</p></dd>
             </dl>
             <dl class="text-center">
-                <dt><img src="../../wp-content/themes/YunBox-core-master/images/old1.jpg" alt=""></dt>
+                <dt><img src="../../wp-content/themes/kadima/images/old1.jpg" alt=""></dt>
                 <dd><p>￥500</p><p>国画</p></dd>
             </dl>
 
@@ -49,11 +49,12 @@ get_header();
 
 
     <script>
-        jQuery.ready(function ($) {
+        jQuery(document).ready(function ($) {
             $('.aside-ul li').click(function () {
                 $(this).parent().children('li').removeClass('aside-active');
                 $(this).addClass('aside-active');
             });
+            $('.aside-ul li.active').addClass('aside-active');
         })
     </script>
 
