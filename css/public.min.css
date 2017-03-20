@@ -1,1 +1,170 @@
-*,ul,li,ol,dl,p{margin:0;padding:0;list-style:none}body{min-width:1170px;font-family:"微软雅黑","新宋体";color:#333;font-size:16px}.left{float:left}.right{float:right}:after{display:block;content:'';clear:both}a{color:#FFF}a:hover{text-decoration:none;color:#FFF}header{padding:.5rem 0 .5rem 5%;background-color:#fff}nav{background-color:#ff5864}.wrap{max-width:1170px;margin:0 auto}nav{color:#FFF}nav li{cursor:pointer}nav li dl dd{color:#FFF}nav li img{width:20%}.nav-active{background-color:#fff}.nav-active dl dd{color:#333}nav li:hover{background-color:#fff}nav li:hover dl dd{color:#333}.nav-tabs.nav-justified>li>a{border:0;display:block !important}.nav-tabs.nav-justified>li>a:hover{background-color:#fff}.nav-tabs.nav-justified>li>a:focus{background-color:#fff}footer{border-top:1px solid #ff5864;margin-top:150px}footer .association{width:60%;color:#999;margin:1rem auto}footer .association li{margin-left:2rem}footer .association li a{color:#999}footer .association li a:hover{color:#ff5864}footer:after{display:block;height:10rem;width:100%;background:#fff url(../images/footer.png)}
+*, ul, li, ol, dl, p {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+body {
+    font-family: "微软雅黑", "新宋体";
+    color: #333;
+    font-size: 16px
+}
+
+.left {
+    float: left
+}
+
+.right {
+    float: right
+}
+
+:after {
+    display: block;
+    content: '';
+    clear: both
+}
+
+a {
+    color: #FFF
+}
+
+a:hover {
+    text-decoration: none;
+    color: #FFF
+}
+
+header {
+    padding: .5rem 0 .5rem 5%;
+    background-color: #fff
+}
+.affix-top{
+    background-color: #ff5864;
+}
+nav {
+    background-color: #ff5864
+}
+
+.wrap {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+nav {
+    color: #FFF
+}
+.navbar{
+    border: none;
+    margin-bottom: 0;
+}
+nav li {
+    cursor: pointer
+}
+#menu-menu-1 li dt{
+    margin: 0 auto;
+}
+.affix{
+    position: relative;
+}
+nav li dl dd {
+    color: #FFF
+}
+
+nav li img {
+    width: 20%
+}
+
+.nav-active {
+    background-color: #fff
+}
+
+.nav-active dl dd {
+    color: #333
+}
+
+nav li:hover {
+    background-color: #fff
+}
+
+nav li:hover dl dd {
+    color: #333
+}
+
+.nav-tabs.nav-justified > li > a {
+    border: 0;
+    display: block !important
+}
+
+.nav-tabs.nav-justified > li > a:hover {
+    background-color: #fff
+}
+
+.nav-tabs.nav-justified > li > a:focus {
+    background-color: #fff
+}
+.navbar-toggle .icon-bar{
+    background-color: #ffffff;
+}
+.navbar-toggle{
+    border-color: #FFF;
+}
+.nav-tabs.nav-justified>.active>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover{
+    border:none;
+    -webkit-border-radius:0;
+    -moz-border-radius:0;
+    border-radius:0;
+}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
+    color:#333;
+}
+nav .active dl dd{
+    color:#333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    border-top: 1px solid #ff5864;
+    margin-top: 50px
+}
+
+footer .association {
+    width: 60%;
+    color: #999;
+    margin: 1rem auto
+}
+
+footer .association li {
+    margin-left: 2rem
+}
+
+footer .association li a {
+    color: #999
+}
+
+footer .association li a:hover {
+    color: #ff5864
+}
+
+footer:after {
+    display: block;
+    height: 10rem;
+    width: 100%;
+    background: #fff url(../images/footer.png)
+}

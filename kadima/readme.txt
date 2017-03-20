@@ -1,3 +1,0 @@
-****NOTE****
-Nothing
-# --- EOF --- #
