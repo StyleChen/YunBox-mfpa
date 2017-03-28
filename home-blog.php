@@ -14,55 +14,42 @@ if($wl_theme_options['blog_title'] !='') { ?>
 	</div>
 	<?php } ?>
 
+    <?php
+    // 将以下category-name改成你的分类别名即可
+   // var_dump(get_category_by_slug('news'));
+    $args = array(
+        'category' => 8,
+        'numberposts' => -1
+    );
+    $audio_posts = get_posts( $args );
 
+
+    ?>
     <div class="container">
 	<div class="row" id="kadima_blog_section">
-	<?php 	if ( have_posts()) : 			
-			$posts_count =wp_count_posts()->publish;
-			$args = array( 'post_type' => 'post','posts_per_page' => $posts_count ,'ignore_sticky_posts' => 1);		
-			$post_type_data = new WP_Query( $args );
-			while($post_type_data->have_posts()):
-			$post_type_data->the_post(); ?>
+	<?php 	if ( have_posts()) :
+                    $indexP = 0;
+                foreach( $audio_posts as $post ) {
+                    //var_dump($post);
+                  //  echo $post->post_date.'<br/>';
+                  //  echo $post->post_title.'<br/>';
+                  //  echo $post->guid.'<br/>';
+                    //var_dump($post);
+//                    var_dump(get_post($post->ID));
+                   // echo get_permalink($post->ID);
+                    $indexP++;
+                    if($indexP > 5){
+                        continue;
+                    }
+			 ?>
 			<div class="col-md-12 col-sm-12 scrollimation scale-in d2 pull-left">
 			<div class="kadima_blog_thumb_wrapper">
-				<div class="kadima_blog_thumb_wrapper_showcase">					
-					<?php $img = array('class' => 'kadima_img_responsive');
-							if(has_post_thumbnail()): 
-							the_post_thumbnail('home_post_thumb',$img);
-					endif; ?>
-					<div class="kadima_blog_thumb_wrapper_showcase_overlay">
-						<div class="kadima_blog_thumb_wrapper_showcase_overlay_inner ">
-							<div class="kadima_blog_thumb_wrapper_showcase_icons">
-								<a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><i class="fa fa-link"></i></a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--<h2><a href="<?php /*the_permalink(); */?>"><?php /*the_title(); */?></a></h2>
-				<?php /*if(get_the_tag_list() != '') { */?>
-				<p class="kadima_tags"><?php /*the_tags('Tags :&nbsp;', '', '<br />'); */?></p>
-				<?php /*} */?>
-				<?php /*the_excerpt( __( 'Read More' , 'kadima' ) ); */?>
-				<a href="<?php /*the_permalink(); */?>" class="kadima_blog_read_btn"><i class="fa fa-plus-circle"></i><?php /*_e('Read More','kadima'); */?></a>
-				<div class="kadima_blog_thumb_footer">
-					<ul class="kadima_blog_thumb_date">
-						<li><i class="fa fa-user"></i><a href="<?php /*echo get_author_posts_url( get_the_author_meta( 'ID' ) ); */?>"><?php /*echo get_the_author(); */?></a></li>
-						<li><i class="fa fa-clock-o"></i>
-						<?php /*if ( ('d M  y') == get_option( 'date_format' ) ) : */?>
-						<?php /*echo get_the_date('F d ,Y'); */?>
-						<?php /*else : */?>
-						<?php /*echo get_the_date(); */?>
-						<?php /*endif; */?>
-						</li>
-						<li><i class="fa fa-comments-o"></i><?php /*comments_popup_link( '0', '1', '%', '', '-'); */?></li>
-					</ul>
-				</div>-->
                 <div class="news">
                     <ul>
                         <li>
-                            <a class="news-a" href="<?php the_permalink(); ?>">
+                            <a class="news-a" href="<?php echo get_permalink($post->ID); ?>">
                                 <i class="left"></i>
-                                <span class="left"><?php the_title(); ?></span>
+                                <span class="left"><?php echo $post->post_title; ?></span>
                                 <span class="right">
                                     <?php if ( ('d M  y') == get_option( 'date_format' ) ) : ?>
                                         <?php echo get_the_date('F d ,Y'); ?>
@@ -76,7 +63,7 @@ if($wl_theme_options['blog_title'] !='') { ?>
                 </div>
 			</div>
 			</div>
-			<?php  endwhile; 
+			<?php    }
 			else : ?>
 			<div class="col-md-4 col-sm-12 scrollimation scale-in d2 pull-left">
 			<div class="kadima_blog_thumb_wrapper">

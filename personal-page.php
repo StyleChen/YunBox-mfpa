@@ -6,7 +6,10 @@
         font-size:16px;
     }
     body{
-        background: none;
+        background: url(wp-content/themes/kadima/images/di-bg.png) center ;
+        background-attachment: fixed;
+        -webkit-background-size: 100%;
+        background-size: 100%;
     }
 </style>
 <section class="section-bg">
@@ -27,3 +30,5 @@
         </div>
     </div>
 </section>
+
+

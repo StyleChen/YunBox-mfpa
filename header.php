@@ -44,7 +44,7 @@
 <body <?php body_class(); ?>>
 <div>
 	<!-- Header Section -->
-	<header class="" >
+	<header class="container" >
 		<div class="" >
 			<!-- Logo & Contact Info -->
 			<div class="row ">
@@ -85,6 +85,13 @@
 					</ul>
 				</div>
 				<?php } ?>
+                <div class="col-md-6 col-sm-12">
+                    <ul class="fontSize">
+                        <li>大</li>
+                        <li class="activeF">中</li>
+                        <li>小</li>
+                    </ul>
+                </div>
 			</div>
 			<!-- /Logo & Contact Info -->
 		</div>
@@ -106,7 +113,7 @@
 					<?php
                     wp_nav_menu( array(
                             'theme_location' => 'primary',
-                            'menu_class' => 'nav nav-tabs nav-justified text-center',  
+                            'menu_class' => 'nav nav-tabs nav-justified text-center',
                             'walker' => new kadima_nav_walker(),
                         )
                     );
