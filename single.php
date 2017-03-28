@@ -11,6 +11,7 @@
 
     <?php
         $ggg = get_the_category();
+        var_dump($ggg)
         $par = get_category_parents($ggg[0]->cat_ID,false,',',true);
         $navM = '';
         $navT = '主页';
@@ -31,7 +32,7 @@
 <div class="container">	
 	<div class="row kadima_blog_wrapper">
         <aside class="col-md-3 aside">
-            <<!--div class="">
+            <!--div class="">
                 <h3 class="h3-title text-center"><?php /*echo $navT */?></h3>
             </div>-->
             <?php

@@ -993,6 +993,8 @@ section p {
 .timeBaseItemText{
     float: left;
     width: 75%;
+    height: 9.5rem;
+    overflow: hidden;
     margin-left: 2.5%;
 }
 .timeBaseItemTextA{
