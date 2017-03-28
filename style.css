@@ -45,7 +45,9 @@ a:hover {
     text-decoration: none;
     color: #FFF
 }
-
+.h4, h4 {
+    font-size: 1.1rem;
+}
 /*header nav*/
 header.container {
     background-color: #fff;
@@ -259,7 +261,7 @@ section h3 {
 .section-header .h3 {
     padding: 7px 2rem 7px 5rem;
     color: #FFF;
-    font-size: 20px;
+    font-size: 1.2rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;
     border-radius: .5rem;
@@ -354,13 +356,13 @@ section h3 {
 }
 
 .hot dd h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .hot dd p {
     text-indent: 36px;
-    font-size: 18px;
+    font-size: 1.1rem;
     line-height: 30px;
 }
 
@@ -452,7 +454,7 @@ a.kadima_scrollup:hover i, a.kadima_scrollup:focus i {
 pre{
     background-color: transparent;
     border:none;
-    font-size: 18px;
+    font-size: 1.1rem;
     white-space: pre-wrap;
     word-wrap: break-word;
 }
@@ -554,7 +556,7 @@ span:after {
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: bold
 }
 
@@ -579,7 +581,7 @@ aside .h3-title {
 }
 
 .aside-ul {
-    font-size: 18px
+    font-size: 1.1rem;
 }
 
 .aside-ul i {
@@ -598,7 +600,7 @@ aside .h3-title {
     height: 60px;
     line-height: 60px;
     border-bottom: 1px solid #FFF;
-    margin: 0 2.6rem;
+    margin: 0 41.6px;
     position: relative;
 }
 
@@ -897,8 +899,8 @@ section p {
     margin-left:7%;
 }
 .aside{
-    padding-top: 12rem;
-    padding-bottom: 11rem;
+    padding-top: 192px;
+    padding-bottom: 176px;
     background: url(images/aside-bg.png) top center no-repeat;
 }
 
@@ -1009,12 +1011,33 @@ section p {
     color:#F0BE3B;
 }
 
-
-
-
-
-
-
+/*字体大小*/
+.fontSize{
+    float: right;
+    margin-right:20%;
+}
+.fontSize li{
+    float: left;
+    margin:0 1rem;
+    padding: 5px;
+    border:1px solid #F1BE3B;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+.fontSize li:nth-child(2){
+    border-color:#ff5864 ;
+    background: #ff5864;
+}
+.fontSize li:nth-child(3){
+    border-color:#27A39C ;
+}
+.fontSize li.activeF{
+    font-size:20px;
+    color:#FFF;
+}
 
 
 
