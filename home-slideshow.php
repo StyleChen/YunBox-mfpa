@@ -1,6 +1,6 @@
 <style>
     body {
-        background: url(wp-content/themes/YunBox-core-master/images/mfpa-bg.png) center no-repeat;
+        background: url(wp-content/themes/YunBox-mfpa/images/mfpa-bg.png) center no-repeat;
         -webkit-background-size: 100%;
         background-size: 100%;
     }
