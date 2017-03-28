@@ -22,36 +22,39 @@
 			<div id="kadima_portfolio_section" class="kadima_photo_gallery flex text-center">
 				<?php for($i=1 ; $i<=7; $i++) { ?>
 				<?php if($wl_theme_options['port_img_'.$i] !='') { ?>
-				<!--<div class="col-lg-3 col-md-3 col-sm-6 pull-left scrollimation fade-right d1">
-					<div class="img-wrapper">
-					
-						<div class="kadima_home_portfolio_showcase">
-							<img class="kadima_img_responsive" alt="<?php /*the_title_attribute(); */?>" src="<?php /*echo esc_url($wl_theme_options['port_img_'.$i]); */?>">
-							<div class="kadima_home_portfolio_showcase_overlay">
-								<div class="kadima_home_portfolio_showcase_overlay_inner ">
-									<div class="kadima_home_portfolio_showcase_icons">
-										<a title="<?php /*echo esc_attr($wl_theme_options['port_title_'.$i]); */?>" href="<?php /*echo esc_url($wl_theme_options['port_link_'.$i]); */?>"><i class="fa fa-link"></i></a>
-										<a class="photobox_a" href="<?php /*echo esc_url($wl_theme_options['port_img_'.$i]); */?>"><i class="fa fa-search-plus"></i><img src="<?php /*echo esc_url($wl_theme_options['port_img_'.$i]); */?>" alt="<?php /*echo esc_attr($wl_theme_options['port_title_'.$i]); */?>" style="display:none !important;visibility:hidden"></a>
-									</div>
-								</div>
-							</div>
-						</div>
-					
-					<?php /*if($wl_theme_options['port_title_'.$i] !='') { */?>
-					<div class="kadima_home_portfolio_caption">
-					<h3><a href="<?php /*echo esc_url($wl_theme_options['port_link_'.$i]); */?>"><?php /*echo esc_attr($wl_theme_options['port_title_'.$i]); */?></a></h3>
-					</div>
-					<?php /*} */?>
-					</div>
-				</div>-->
                         <dl>
                             <dt><img class="img-responsive" src="<?php echo esc_url($wl_theme_options['port_img_'.$i]); ?>" alt="<?php echo esc_attr($wl_theme_options['port_title_'.$i]); ?>"></dt>
                             <dd><h4 class="left">[ <?php echo esc_attr($wl_theme_options['port_title_'.$i]); ?> ]</h4><h4 class="right"><?php echo esc_attr($wl_theme_options['port_description_'.$i]); ?></h4></dd>
                         </dl>
-
 				<?php } ?>
 				<?php } ?>
 			</div>
+            <div id="product" class="hide">
+                <div id="carousel-example-generic-1" class="carousel slide container" data-ride="carousel">
+
+                    <!-- Wrapper for slides -->
+                    <div class="carousel-inner" role="listbox">
+                        <?php for($i=1 ; $i<=7; $i++) { ?>
+                            <?php if($wl_theme_options['port_img_'.$i] !='') { ?>
+                                <div class="item">
+                                    <img class="img-responsive" src="<?php echo esc_url($wl_theme_options['port_img_'.$i]); ?>" alt="...">
+                                </div>
+                            <?php } ?>
+                        <?php } ?>
+                    </div>
+                    <!-- Controls -->
+                    <a class="left carousel-control" href="#carousel-example-generic-1" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic-1" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                    <!-- colse-->
+                    <div id="colse">X</div>
+                </div>
+            </div>
 			</div>
 						
 		</div>
