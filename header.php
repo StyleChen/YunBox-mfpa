@@ -85,6 +85,13 @@
 					</ul>
 				</div>
 				<?php } ?>
+                <div class="col-md-6 col-sm-12">
+                    <ul class="fontSize">
+                        <li>大</li>
+                        <li class="activeF">中</li>
+                        <li>小</li>
+                    </ul>
+                </div>
 			</div>
 			<!-- /Logo & Contact Info -->
 		</div>
