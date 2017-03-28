@@ -84,6 +84,8 @@ class kadima_nav_walker_second extends Walker_Nav_Menu {
     function start_lvl( &$output, $depth = 0, $args = array() ) {
         $indent = str_repeat("\t", $depth);
         $output .= "\n$indent<ul class=\"dropdown-menu\">\n";
+
+
     }
     function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
         $indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
