@@ -18,7 +18,7 @@ if($wl_theme_options['blog_title'] !='') { ?>
     // 将以下category-name改成你的分类别名即可
    // var_dump(get_category_by_slug('news'));
     $args = array(
-        'category' => 8,
+        'category' => 1,
         'numberposts' => -1
     );
     $audio_posts = get_posts( $args );

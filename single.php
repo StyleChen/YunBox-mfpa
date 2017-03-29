@@ -11,7 +11,6 @@
 
     <?php
         $ggg = get_the_category();
-        var_dump($ggg);
         $par = get_category_parents($ggg[0]->cat_ID,false,',',true);
         $navM = '';
         $navT = '主页';

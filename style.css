@@ -77,7 +77,7 @@ nav {
 nav li {
     cursor: pointer
 }
-#menu-menu li dt{
+#menu-menu-1 li dt{
     margin: 0 auto;
 }
 .affix{
@@ -181,7 +181,7 @@ body {
 .navbar-container{
     background-color: #ff5864;
 }
-#menu-menu li:first-child dt{
+#menu-menu-1 li:first-child dt{
     width: 32px;
     height: 32px;
     background: url(./images/nav1.png) center no-repeat;
@@ -189,7 +189,7 @@ body {
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu li:nth-child(2) dt{
+#menu-menu-1 li:nth-child(2) dt{
     width: 32px;
     height: 32px;
     background: url(./images/nav2.png) center no-repeat;
@@ -197,7 +197,7 @@ body {
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu li:nth-child(3) dt{
+#menu-menu-1 li:nth-child(3) dt{
     width: 32px;
     height: 32px;
     background: url(./images/nav3.png) center no-repeat;
@@ -205,7 +205,7 @@ body {
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu li:nth-child(4) dt{
+#menu-menu-1 li:nth-child(4) dt{
     width: 32px;
     height: 32px;
     background: url(./images/nav4.png) center no-repeat;
@@ -213,7 +213,7 @@ body {
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu li:nth-child(5) dt{
+#menu-menu-1 li:nth-child(5) dt{
     width: 32px;
     height: 32px;
     background: url(./images/nav5.png) center no-repeat;
@@ -221,7 +221,7 @@ body {
     -webkit-background-size: 100%;
     background-size: 100%;
 }
-#menu-menu li:nth-child(6) dt{
+#menu-menu-1 li:nth-child(6) dt{
     width: 32px;
     height: 32px;
     background: url(./images/nav6.png) center no-repeat;
@@ -469,23 +469,28 @@ span:after {
 .section-bg {
     height: 60vh;
 }
-
-.login {
+.woocommerce{
+    width: 50%;
+    margin:0 auto;
+}
+.woocommerce form.login {
     border: 1px solid #e1e1e1;
     overflow: hidden;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    min-width: 40%;
-    padding-bottom: 2rem;
-    margin-top: 12%;
-    margin-right: 20%;
     -webkit-box-shadow: inset 0 0 1px 1px #e1e1e1;
     -moz-box-shadow: inset 0 0 1px 1px #e1e1e1;
     box-shadow: inset 0 0 1px 1px #e1e1e1;
     background-color: #fff;
+    padding: 0;
 }
-
+.woocommerce form .form-row label, .woocommerce-page form .form-row label{
+    display: inline-block;
+    width: 48%;
+    overflow: hidden;
+    padding-left: 3rem;
+}
 .login h4 {
     background-color: #ff5864;
     margin: 0;
@@ -498,8 +503,11 @@ span:after {
     width: 80%;
     margin: 0 auto
 }
-
-.login-wrap button {
+.woocommerce form .form-row{
+    margin-left: 20px;
+    margin: 20px;
+}
+.woocommerce input.button {
     display: block;
     width: 70%;
     padding: .5rem 0;
@@ -510,27 +518,53 @@ span:after {
     color: #ff5864
 }
 
-.login-wrap button:hover {
+.woocommerce input.button:hover {
     background-color: #ff5864;
     color: #FFF
 }
-
+.woocommerce form .form-row label.inline{
+    display: block;
+    text-align: center;
+    color:#ff5864;
+    font-weight: 100;
+    width: 100%;
+}
 .login-wrap a {
     color: #ff5864
 }
-
+#rememberme{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: 3px;
+}
+.lost_password{
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.lost_password a{
+    color:#999;
+}
 .login-wrap a:hover {
     text-decoration: underline
 }
 
-.user {
-    background: url(./images/personal-user.png) .5rem center no-repeat
+label[for=username] {
+    background: url(./images/personal-user.png) left center no-repeat;
+    position: relative;
+    top: 10px;
+    font-weight:500;
 }
 
-.password {
-    background: url(./images/personal-pass.png) .5rem center no-repeat
+label[for=password] {
+    background: url(./images/personal-pass.png) left center no-repeat;
+    position: relative;
+    top: 10px;
+    font-weight:500;
 }
-
+.woocommerce form .form-row label {
+    line-height: 2.3;
+}
 .login-public {
     margin: 2rem auto
 }
@@ -541,10 +575,10 @@ span:after {
     background-size: 1.8rem
 }
 
-.login-public input {
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
     display: inline-block;
-    width: 60%;
-    height: 28px;
+    height: 40px;
+    width: 50%;
     background-color: #efefef;
     border: 0
 }
