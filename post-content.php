@@ -30,19 +30,6 @@
 		<?php endif; ?>
 		<div class="kadima_fuul_blog_detail_padding">
 		<h2><?php if(!is_single()) {?><a href="<?php the_permalink(); ?>"><?php } ?><?php the_title(); ?></a></h2>
-		<div class="row">
-		<div class="col-md-6 col-sm-3">
-		<?php if(get_the_tag_list() != '') { ?>
-		<p class="kadima_tags"><?php the_tags( __('Tags : ','kadima'), '', '<br />'); ?></p>
-		<?php } ?>
-		</div>
-		<div class="col-md-6 col-sm-3">
-		<?php if(get_the_category_list() != '') { ?>
-		<p class="kadima_cats"><?php echo __("Category : ",'kadima');
-		the_category(' , '); ?></p>
-		<?php } ?>
-		</div>
-		</div>
 		<?php the_content( __( 'Read More' , 'kadima' ) ); 
 		$defaults = array(
               'before'           => '<div class="kadima_blog_pagination"><div class="kadima_blog_pagi">' . __( 'Pages:','kadima'  ),
@@ -59,7 +46,4 @@
 	          wp_link_pages( $defaults ); ?>
 		</div>
 	</div>
-</div>
-<div class="push-right">
-<hr class="blog-sep header-sep">
 </div>

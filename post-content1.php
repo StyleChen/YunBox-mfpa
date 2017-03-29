@@ -1,5 +1,4 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class('kadima_blog_full'); ?> style="float:left;">
-
 	<div class="post-content-wrap">
 		<?php if(has_post_thumbnail()): 
 		$img = array('class' => 'kadima_img_responsive'); ?>
@@ -19,7 +18,6 @@
 		</div>
 		<?php endif; ?>
 		<div class="kadima_fuul_blog_detail_padding">
-
 		<?php the_content( __( 'Read More' , 'kadima' ) ); 
 		$defaults = array(
               'before'           => '<div class="kadima_blog_pagination"><div class="kadima_blog_pagi">' . __( 'Pages:','kadima'  ),

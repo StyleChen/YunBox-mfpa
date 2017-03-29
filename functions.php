@@ -6,21 +6,14 @@
 	function kadima_scripts() {
         wp_enqueue_style('bootstrap', '//statics.yunclever.com/bootstrap/3.3.7/css/bootstrap.min.css');
         wp_enqueue_style('animations', '//statics.yunclever.com/animate/3.5.1/animate.css');
-        //wp_enqueue_style('theme-animtae', get_template_directory_uri() . '/css/theme-animtae.css');
         wp_enqueue_style('font-awesome', '//statics.yunclever.com/font-awesome/4.7.0/css/font-awesome.min.css');
         wp_enqueue_style('video-js-css', '//statics.yunclever.com/videojs/5.17.0/video-js.min.css');
         wp_enqueue_style('font-family', get_template_directory_uri() . '/css/font-family.css');
-//        wp_enqueue_style('default', get_template_directory_uri() . '/css/default.css');
         wp_enqueue_style('style', get_template_directory_uri() . '/style.css');
-//        wp_enqueue_style('public', get_template_directory_uri() . '/css/public.min.css');
-//        wp_enqueue_style('mfpa', get_template_directory_uri() . '/css/mfpa.min.css');
-//        wp_enqueue_style('assoca', get_template_directory_uri() . '/css/assoca.min.css');
-//        wp_enqueue_style('personal', get_template_directory_uri() . '/css/personal.min.css');
         wp_enqueue_script('bootstrap-js', '//statics.yunclever.com/bootstrap/3.3.7/js/bootstrap.min.js', array('jquery'));
         wp_enqueue_script('video-js', '//statics.yunclever.com/videojs/5.17.0/video.min.js', array('jquery'));
         wp_enqueue_script('logjs', '//statics.yunclever.com/log/0.3.0/log.min.js', array('jquery'));
         wp_enqueue_script('kadima-theme-script', get_template_directory_uri() .'/js/kadima_theme_script.js', array('jquery'));
-//        wp_enqueue_script('jquery1', get_template_directory_uri() .'/js/jquery-1.11.3.min.js', array('jquery'));
         wp_enqueue_script('mfpa', get_template_directory_uri() .'/js/mfpa.min.js', array('jquery'));
         if(is_front_page()){
             wp_enqueue_script('jquery.carouFredSel', '//cdn.bootcss.com/jquery.caroufredsel/6.2.1/jquery.carouFredSel.packed.js');
@@ -31,7 +24,6 @@
         }
     }
 	add_action('wp_enqueue_scripts', 'kadima_scripts');
-	//require( WL_TEMPLATE_DIR_CORE . '/comment-function.php' );
 	require(dirname(__FILE__).'/customizer.php');
 	function get_client_language(){ // 获取访问用户的语言
 		if(isset($_SERVER["HTTP_ACCEPT_LANGUAGE"])){
@@ -148,14 +140,14 @@
     	) );
 	}
 	function kadima_breadcrumbs() { // 面包屑导航
-        $delimiter = '';
+        $delimiter = '/';
         $home = __('Home', 'kadima' ); // text for the 'Home' link
         $before = '<li>'; // tag before the current crumb
         $after = '</li>'; // tag after the current crumb
-        echo '<ul class="breadcrumb">';
+        //echo '<ul class="breadcrumb">';
         global $post;
         $homeLink = home_url();
-       // echo '<li><a href="' . $homeLink . '">' . $home . '</a></li>' . $delimiter . ' ';
+        //echo '<a href="' . $homeLink . '">' . $home . '</a>' . $delimiter . ' ';
         if (is_category()) {
             global $wp_query;
             $cat_obj = $wp_query->get_queried_object();
@@ -164,7 +156,7 @@
             $parentCat = get_category($thisCat->parent);
             if ($thisCat->parent != 0)
                 echo(get_category_parents($parentCat, TRUE, ' ' . $delimiter . ' '));
-            echo $before . ' _e("Archive by category","kadima") "' . single_cat_title('', false) . '"' . $after;
+            echo single_cat_title('', false);
         } elseif (is_day()) {
            echo '<li><a href="' . get_year_link(get_the_time('Y')) . '">' . get_the_time('Y') . '</a></li> ' . $delimiter . ' ';
             echo '<li><a href="' . get_month_link(get_the_time('Y'), get_the_time('m')) . '">' . get_the_time('F') . '</a></li> ' . $delimiter . ' ';
@@ -178,13 +170,13 @@
             if (get_post_type() != 'post') {
                 $post_type = get_post_type_object(get_post_type());
                 $slug = $post_type->rewrite;
-                echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ' . $delimiter . ' ';
-                echo $before . get_the_title() . $after;
+                //echo '<li><a href="' . $homeLink . '/' . $slug['slug'] . '/">' . $post_type->labels->singular_name . '</a></li> ' . $delimiter . ' ';
+                //echo $before . get_the_title() . $after;
             } else {
                 $cat = get_the_category();
                 $cat = $cat[0];
                 echo get_category_parents($cat, TRUE, ' ' . $delimiter . ' ');
-                echo $before . get_the_title() . $after;
+                //echo $before . get_the_title() . $after;
             }
         } elseif (!is_single() && !is_page() && get_post_type() != 'post') {
             $post_type = get_post_type_object(get_post_type());
@@ -222,7 +214,7 @@
         } elseif (is_404()) {
             echo $before . _e("Error 404","kadima") . $after;
         }
-        echo '</ul>';
+        //echo '</ul>';
 	}
 	function kadima_pagination($pages = '', $range = 2) { //分页
         $showitems = ($range * 2)+1;
@@ -727,4 +719,10 @@
 	    );
 	}
 	//smilies_reset();
+	add_filter('woocommerce_page_title', 'customWooc_shop_page_title');
+	function customWooc_shop_page_title( $page_title ) {
+		if( 'Shop' == $page_title) {
+			return '';
+		}
+	}
 ?>

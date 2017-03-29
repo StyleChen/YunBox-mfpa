@@ -1,8 +1,11 @@
 <?php get_header(); ?>
-
     <div class="container">
         <div class="row kadima_blog_wrapper">
             <div class="col-md-12">
+				<h4>
+					你当前的位置:
+					<span>首页 / <?php if (function_exists('kadima_breadcrumbs')) kadima_breadcrumbs(); ?></span>
+				</h4>
                 <aside class="col-md-3 aside">
                     <?php
                     wp_nav_menu( array(
@@ -13,23 +16,14 @@
                     );
                     ?>
                 </aside>
-
-                <section class="col-md-9 ">
-                    <h4 class="text-center">
-                        你当前的位置:
-                        <span>首页</span>
-                        —
-                        <span>画家简介</span>
-                        <?php if(!is_home()){echo "—"; } ?>
-                        <span><?php if(is_home()){echo "";}else{  echo single_cat_title( '', false ); } ?></span>
-                    </h4>
+                <section class="col-md-9 ">                    
                     <h3 class="text-center">
                         <?php if(is_home()){echo "";}else{  echo single_cat_title( '', false ); } ?>
                     </h3>
                     <div class="timeBase">
-                        <?php
-                                if ( have_posts()):
-                                    while ( have_posts() ): the_post(); ?>
+					<?php
+						if ( have_posts()):
+							while ( have_posts() ): the_post(); ?>
                         <div class="timeBaseItem">
                             <p class="timeBaseItemP left">
                                 <?php if ( ('d M  y') == get_option( 'date_format' ) ) : ?>
