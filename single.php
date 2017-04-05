@@ -23,6 +23,12 @@
         }else if(strstr($par,'timebase')){
             $navM = 'second';
             $navT = '';
+        }else if(strstr($par,'artists')){
+            $navM = 'three';
+            $navT = '';
+        }else if(strstr($par,'timeline')){
+            $navM = 'second';
+            $navT = '';
         }else{
             $navM = 'primary';
         };
@@ -31,7 +37,7 @@
 <div class="container">	
 	<div class="row kadima_blog_wrapper">
         <aside class="col-md-3 aside">
-            <!--div class="">
+            <<!--div class="">
                 <h3 class="h3-title text-center"><?php /*echo $navT */?></h3>
             </div>-->
             <?php

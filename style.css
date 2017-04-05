@@ -469,7 +469,7 @@ span:after {
 .section-bg {
     height: 60vh;
 }
-.woocommerce{
+.woo-login .woocommerce{
     width: 50%;
     margin:0 auto;
 }
@@ -598,9 +598,7 @@ section h3 {
     margin-bottom: 30px
 }
 
-aside {
-    margin-top: 84px
-}
+
 
 aside .h3-title {
     box-sizing: content-box;
@@ -729,7 +727,7 @@ section p {
     list-style: none;
     background-color: transparent;
     border-radius: 0;
-    display: inline;
+    text-align: center;
 }
 .breadcrumb li{
     display: inline;
@@ -1027,7 +1025,7 @@ section p {
 .timeBaseItemText{
     float: left;
     width: 75%;
-    height: 9.5rem;
+    height: 7.5rem;
     overflow: hidden;
     margin-left: 2.5%;
 }
