@@ -1150,3 +1150,9 @@ strong:after{
     display: inline;
 }
 
+.row.kadima_blog_wrapper{
+    margin-top: 30px;
+}
+.breadcrumb{
+    margin-bottom: 30px;
+}

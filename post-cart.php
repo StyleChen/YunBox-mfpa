@@ -1,7 +1,7 @@
 <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
 <div class="kadima_blog_full">
     <section class="col-md-12">
-        <h4 class="text-center">
+        <h4 class="text-center breadcrumb">
             你当前的位置:
             <span>首页</span>
             —
