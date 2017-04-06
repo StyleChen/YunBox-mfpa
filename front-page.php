@@ -6,21 +6,15 @@ if ($wl_theme_options['_frontpage']=="1" && is_front_page())
 {
 	get_template_part('home','slideshow');
 	if($wl_theme_options['service_home'] == "1") {
-	get_template_part('home','services');
+		get_template_part('home','services');
 	}
-
 	if($wl_theme_options['show_blog'] == "1") {
-	get_template_part('home','blog');
+		get_template_part('home','blog');
 	}
     if($wl_theme_options['portfolio_home'] == "1") {
         get_template_part('home','portfolio');
     }
-
-        get_template_part('custom','One');
-
-	/*if($wl_theme_options['fc_home'] == "1") {
-	get_template_part('footer','callout');
-	}*/
+	get_template_part('custom','One');
 	get_footer();
 }
 else
