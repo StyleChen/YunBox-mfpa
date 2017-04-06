@@ -5,7 +5,7 @@
             你当前的位置:
             <span>首页</span>
             —
-            <span><?php if (function_exists('kadima_breadcrumbs')) kadima_breadcrumbs(); ?></span>
+            <span class="breadcrumbs_li"><?php if (function_exists('kadima_breadcrumbs')) kadima_breadcrumbs(); ?></span>
             —
             <span><?php if(is_home()){echo "";}else{the_title();} ?></span>
         </h4>

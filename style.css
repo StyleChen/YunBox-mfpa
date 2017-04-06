@@ -1146,5 +1146,7 @@ strong:after{
 .cat-item a{
     color:#333;
 }
-
+.breadcrumbs_li li,.breadcrumbs_li:after{
+    display: inline;
+}
 
