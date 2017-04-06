@@ -12,7 +12,7 @@ get_template_part('artist-category-header');
 						$img = array('class' => 'kadima_img_responsive img-responsive'); ?>
 						<div class="kadima_blog_thumb_wrapper_showcase">
 							<div class="kadima_blog-img">
-								<?php the_post_thumbnail('blog_2c_thumb',$img); ?>
+								<?php the_post_thumbnail('more',$img); ?>
 							</div>
 							<?php if (is_home()) : ?>
 								<div class="kadima_blog_thumb_wrapper_showcase_overlay">
