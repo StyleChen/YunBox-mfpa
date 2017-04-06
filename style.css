@@ -419,9 +419,9 @@ section h3 {
 /*!* Scroll To Top ----------------------------------------------------------------------------------------------------------------------------------------------------------------*!*/
 
 .kadima_scrollup {
-    width: 45px;
-    height: 40px;
-    opacity: 0.5;
+    width: 100px;
+    height: 80px;
+    opacity: 1;
     position: fixed;
     bottom: 100px;
     right: 30px;
@@ -430,7 +430,7 @@ section h3 {
     text-align: center;
     color: #fafafa;
     font-size: 25px;
-    background: #3b3b3b;
+    background: url(./images/toTop.png);
     z-index: 9999;
     -webkit-transition: all ease 0.5s;
     -moz-transition: all ease 0.5s;
@@ -1161,4 +1161,11 @@ strong:after{
 }
 .breadcrumb{
     margin-bottom: 30px;
+}
+
+
+
+
+.fa-chevron-up:before{
+    content: '';
 }
