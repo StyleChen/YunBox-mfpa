@@ -3,7 +3,7 @@
 		<div class="col-md-12">
 			<h4 class="breadcrumb">
 				你当前的位置:
-				<span>首页 / <?php if (function_exists('kadima_breadcrumbs')) kadima_breadcrumbs(); ?><?php if(is_home()){echo "";}else{the_title();} ?></span>
+				<span>首页 / <?php if (function_exists('kadima_breadcrumbs')) kadima_breadcrumbs(); ?></span>
 			</h4>
 			<aside class="col-md-3 aside">
 				<?php
@@ -16,6 +16,6 @@
 				?>
 			</aside>
 			<section class="col-md-9">
-				<h3 class="text-center">
-					<?php if(is_home()){echo "";}else{the_title();} ?>
-				</h3>
+				<!--<h3 class="text-center">
+					<?php /*if(is_home()){echo "";}else{the_title();} */?>
+				</h3>-->
