@@ -734,7 +734,6 @@ section p {
     list-style: none;
     background-color: transparent;
     border-radius: 0;
-    display: inline;
     text-align: center;
 }
 .breadcrumb li{
