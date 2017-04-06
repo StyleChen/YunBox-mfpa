@@ -26,6 +26,9 @@
         }else if(strstr($par,'artists')){
             $navM = 'three';
             $navT = '';
+        }else if(strstr($par,'artist')){
+            $navM = 'three';
+            $navT = '';
         }else if(strstr($par,'timeline')){
             $navM = 'second';
             $navT = '';
