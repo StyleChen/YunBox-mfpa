@@ -109,7 +109,8 @@ nav li:hover dl dd {
 
 .nav-tabs.nav-justified > li > a {
     border: 0;
-    display: block !important
+    display: block !important;
+    min-height:50px;
 }
 
 .nav-tabs.nav-justified > li > a:hover {
@@ -470,6 +471,9 @@ span:after {
     height: 60vh;
 }
 .woo-login .woocommerce{
+    margin-top:30px;
+}
+.woo-login .woocommerce .login{
     width: 50%;
     margin:0 auto;
 }
@@ -727,6 +731,7 @@ section p {
     list-style: none;
     background-color: transparent;
     border-radius: 0;
+    display: inline;
     text-align: center;
 }
 .breadcrumb li{
@@ -1072,6 +1077,71 @@ section p {
     font-size:20px;
     color:#FFF;
 }
+
+
+.woocommerce div.product{
+    margin-top: 85px;
+}
+.woocommerce-LoopProduct-link,.product-name a{
+    color:#333;
+}
+.woocommerce .actions input.button{
+    display: inline;
+    width:auto;
+    padding:.618em 1em;
+}
+
+#coupon_code{
+    width: 100px;
+}
+.woocommerce form .form-row-first, .woocommerce form .form-row-last, .woocommerce-page form .form-row-first, .woocommerce-page form .form-row-last{
+    width: 42%;
+}
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea,.woocommerce form .form-row label, .woocommerce-page form .form-row label{
+    width: 100%;
+}
+.showcoupon,.showlogin{
+    color:#999;
+}
+#customer_details .woocommerce form .form-row input.input-text,#customer_details .woocommerce form .form-row textarea,
+#add_payment_method #payment, .woocommerce-cart #payment, .woocommerce-checkout #payment{
+    background: #fff;
+}
+
+.woocommerce-info {
+    border-top-color: #ff5864;
+}
+
+.woocommerce-info:before {
+    color: #ff5864;
+}
+.page-title{
+    display: none;
+}
+
+.woocommerce ul.products li.product h3{
+    color:#333;
+}
+
+strong:after{
+    display: inline;
+}
+.woo-login a:after{
+    display: inline;
+}
+.woo-login a{
+    color:#999;
+}
+.woocommerce-MyAccount-navigation-link{
+    padding-left:20px;
+    margin:10px 0;
+
+}
+.woo-login .woocommerce-MyAccount-navigation-link a{
+    color:#333;
+}
+
 
 
 

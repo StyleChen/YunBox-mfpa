@@ -35,8 +35,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>
-
-	<?php foreach ( $checkout->checkout_fields['billing'] as $key => $field ) : ?>
+    <?php $array = array("billing_address_1" => array("autocomplete"=>"address-line1")); ?>
+    <?php foreach ( $checkout->checkout_fields['billing'] as $key => $field ) : ?>
 
 		<?php woocommerce_form_field( $key, $field, $checkout->get_value( $key ) ); ?>
 

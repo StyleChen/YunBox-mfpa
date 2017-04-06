@@ -34,10 +34,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php endif; ?>
 
-		<h2><?php _e( 'Login', 'woocommerce' ); ?></h2>
+<!--		<h2>--><?php //_e( 'Login', 'woocommerce' ); ?><!--</h2>-->
 
 		<form method="post" class="login">
-
+            <h4 class="text-left">账号登录</h4>
 			<?php do_action( 'woocommerce_login_form_start' ); ?>
 
 			<p class="woocommerce-FormRow woocommerce-FormRow--wide form-row form-row-wide">

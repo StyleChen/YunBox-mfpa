@@ -15,7 +15,6 @@
  * @package WooCommerce/Templates
  * @version 2.6.0
  */
-
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -27,7 +26,11 @@ wc_print_notices();
  * @since 2.6.0
  */
 do_action( 'woocommerce_account_navigation' ); ?>
-
+<style>
+    .personal-bg,.personal-bg:after{
+        background: transparent;
+    }
+</style>
 <div class="woocommerce-MyAccount-content">
 	<?php
 		/**

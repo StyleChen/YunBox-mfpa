@@ -106,6 +106,7 @@
         register_nav_menu( 'second', __( 'second Menu', 'kadima' ) );
         register_nav_menu( 'three', __( 'three Menu', 'kadima' ) );
         register_nav_menu( 'four', __( 'four Menu', 'kadima' ) );
+        register_nav_menu( 'shopping', __( 'shopping Menu', 'kadima' ) );
 		$args = array('default-color' => '000000',);
 		add_theme_support( 'custom-background', $args);
 		add_theme_support( 'automatic-feed-links');

@@ -19,7 +19,7 @@ get_header(); ?>
     </style>
     <div class="personal-bg">
         <div class="container">
-            <div class="row kadima_blog_wrapper">
+            <div class="row kadima_blog_wrapper woo-login">
                 <div class="col-md-12">
                     <?php if ( have_posts()) : while ( have_posts() ) : the_post(); ?>
                                 <?php the_content( __( 'Read More' , 'kadima' ) ); ?>
