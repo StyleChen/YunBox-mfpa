@@ -734,11 +734,10 @@ section p {
     list-style: none;
     background-color: transparent;
     border-radius: 0;
-    text-align: center;
+    text-align: left;
 }
 .breadcrumb li{
     display: inline;
-
 }
 .breadcrumb a{
     color:#34b6ea;
