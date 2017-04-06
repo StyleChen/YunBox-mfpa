@@ -1,6 +1,3 @@
-<?php //Template Name:Full-Width-Tpl Page
-get_header(); 
- ?>
 <div class="container">
 	<div class="row kadima_blog_wrapper">
 		<div class="col-md-12">
@@ -11,15 +8,14 @@ get_header();
 			<aside class="col-md-3 aside">
 				<?php
 				wp_nav_menu( array(
-						'theme_location' => 'second',
-						'menu_class' => 'aside-ul aside-margin',
+						'theme_location' => 'three',
+						'menu_class' => 'aside-ul text-center',
 						'walker' => new kadima_nav_walker_second(),
 					)
 				);
 				?>
 			</aside>
-			<?php get_template_part('post','page'); ?>
-		</div>
-	</div>
-</div>
-<?php get_footer(); ?>
+			<section class="col-md-9">
+				<h3 class="text-center">
+					<?php if(is_home()){echo "";}else{the_title();} ?>
+				</h3>

@@ -1,4 +1,4 @@
-<!-- service section -->
+
 <?php $wl_theme_options = kadima_get_options(); ?>
 <div class="kadima_service">
 <?php if($wl_theme_options['home_service_heading'] !='') { ?>
@@ -28,4 +28,3 @@
 		</div>
 	</div>
 </div>
-<!-- /Service section -->
